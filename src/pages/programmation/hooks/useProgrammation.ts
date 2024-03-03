@@ -10,6 +10,7 @@ import {
 } from "@/services/fakers/inferred-types.faker";
 
 import { ItemCell } from "../components/item-cell";
+import { TitleCell } from "../components/title-cell";
 
 type View = "domaine" | "periode";
 
@@ -59,7 +60,10 @@ const generateDomaineViewColumns = (programmation: Programmation) => {
     row.items.find((item: Item) => item.periodeId === periodeId);
 
   return [
-    domaineColumnHelper.accessor("name", { header: "Domaine" }),
+    domaineColumnHelper.accessor("name", {
+      header: "Domaine",
+      cell: TitleCell("domaine")
+    }),
     ...periodes.map((periode) =>
       domaineColumnHelper.accessor(findItemByPeriodeId(periode.id), {
         header: periode.name,
@@ -84,7 +88,10 @@ const generatePeriodeViewColumns = (programmation: Programmation) => {
     );
 
   return [
-    periodeColumnHelper.accessor("name", { header: "Période" }),
+    periodeColumnHelper.accessor("name", {
+      header: "Période",
+      cell: TitleCell("periode")
+    }),
     ...domaines.map((domaine) =>
       periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
         header: domaine.name,
