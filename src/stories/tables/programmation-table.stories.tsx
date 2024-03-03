@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ProgrammationTable } from "@/pages/programmation/components/programmation-table";
 
 import { domaines, domaineViewColumns } from "./domaine-view";
+import { periodes, periodeViewColumns } from "./periode-view";
 
 const meta = {
   title: "Tables/ProgrammationTable",
@@ -32,5 +33,13 @@ export const DomaineView: Story = {
     data: domaines,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     columns: domaineViewColumns as any[]
+  }
+};
+
+export const PeriodeView: Story = {
+  args: {
+    data: periodes,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    columns: periodeViewColumns as any[]
   }
 };
