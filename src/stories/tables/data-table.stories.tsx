@@ -12,8 +12,8 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    data: { control: "object", required: true },
-    columns: { control: "object", required: true }
+    data: { control: "object" },
+    columns: { control: "object" }
   }
 } as Meta<typeof DataTable>;
 
