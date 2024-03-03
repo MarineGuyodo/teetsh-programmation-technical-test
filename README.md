@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Test technique Teetsh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Démarrage
 
-Currently, two official plugins are available:
+Pour faire fonctionner le projet, les variables d'environnement doivent être correctement renseignées au préalable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vous pouvez vous aider du fichier `.env.example` pour cela.
 
-## Expanding the ESLint configuration
+### Enoncé
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Une matière (i.e. Français, etc.) est composée de domaines (i.e. language oral, écriture, etc.).
+- Une année scolaire est composée de périodes (séparées par les vacances scolaire).
+- Une programmation permet de découper l’enseignement d’une matière ou d’un domaine et de la planifier chronologiquement.
 
-- Configure the top-level `parserOptions` property like this:
+<aside>
+👉 On souhaite pouvoir **visualiser une programmation sous forme de tableau** dont une dimension est le domaine et l’autre dimension est la période. On souhaite aussi laisser la possibilité à l’utilisateur d’**inverser les lignes et colonnes** de ce tableau.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+</aside>
+
+### Exemple de rendu du tableau
+
+|           | Nombres                | Calculs | etc. |
+| --------- | ---------------------- | ------- | ---- |
+| Période 1 | Nombres jusqu’à 99...  | ...     | ...  |
+| Période 2 | Nombres jusqu’à 999... | ...     | ...  |
+| etc.      |                        |         |      |
+
+### Point d’entrée
+
+```bash
+curl --location 'https://...' \
+--header 'Authorization: Bearer ...'
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Consignes
+
+- Temps indicatif : 4h
+- Aucune limite de librairie, langage, UI, etc.
