@@ -1,11 +1,12 @@
 // HOOKS
 import { useQuery } from "@tanstack/react-query";
+import useProgrammation from "./hooks/useProgrammation";
 
 // SERVICES
 import { getProgrammation } from "@/services/programmations.services";
-import { domaines, domaineViewColumns } from "@/stories/tables/domaine-view";
 
 // COMPONENTS
+import { Button } from "@/components/ui/button";
 import { ProgrammationTable } from "@/pages/programmation/components/programmation-table";
 
 function ProgrammationPage() {
@@ -20,20 +21,20 @@ function ProgrammationPage() {
     staleTime: Infinity
   });
 
-  console.log({ programmation, isLoading, isError, error });
+  const { columns, data, view, handleToggleView } = useProgrammation();
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-4">
+    <div className="flex h-full w-full flex-col p-8 pt-0">
       {isLoading && <div>Chargement en cours...</div>}
 
       {isError && <div>Oups ! {error.message}</div>}
 
+      <Button onClick={handleToggleView} data-testid="view-toggle">
+        Par {view === "domaine" ? "période" : "domaine"}
+      </Button>
+
       {!isLoading && !isError && !!programmation && (
-        <ProgrammationTable
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          columns={domaineViewColumns as any[]}
-          data={domaines}
-        />
+        <ProgrammationTable columns={columns} data={data} />
       )}
     </div>
   );

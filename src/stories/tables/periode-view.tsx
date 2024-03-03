@@ -18,7 +18,7 @@ const findItemByDomaineId = (domaineId: string) => (row: Periode) =>
   );
 
 const periodeViewColumns = [
-  periodeColumnHelper.accessor("name", { header: "Periode" }),
+  periodeColumnHelper.accessor("name", { header: "Période" }),
   ...domaines.map((domaine) =>
     periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
       header: domaine.name,
