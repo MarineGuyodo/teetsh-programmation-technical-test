@@ -17,11 +17,12 @@ function ProgrammationPage() {
     error
   } = useQuery({
     queryKey: ["programmation"],
-    queryFn: async () => await getProgrammation(),
+    queryFn: async () => getProgrammation(10),
     staleTime: Infinity
   });
 
-  const { columns, data, view, handleToggleView } = useProgrammation();
+  const { columns, data, view, handleToggleView } =
+    useProgrammation(programmation);
 
   return (
     <div className="flex h-full w-full flex-col p-8 pt-0">
