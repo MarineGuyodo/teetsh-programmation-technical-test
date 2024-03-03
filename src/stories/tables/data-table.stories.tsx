@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { createColumnHelper } from "@tanstack/react-table";
+// import { createColumnHelper } from "@tanstack/react-table";
 
 import { DataTable } from "@/components/data-table";
 
@@ -69,13 +69,20 @@ const tasks: Task[] = [
 //   { name: "Thursday", taskId: 1 }
 // ];
 
-const helper = createColumnHelper<Task>();
+// const helper = createColumnHelper<Task>();
 
-const taskColumns = [helper.accessor("name", { header: "Task" })];
+// const taskColumns = [helper.accessor("name", { header: "Task" })];
+
+const taskColumnsWithoutHelper = [
+  { accessorKey: "id", header: "ID" },
+  { accessorKey: "name", header: "Task" },
+  { accessorKey: "description", header: "Description" }
+];
 
 export const TwoDimensions: Story = {
   args: {
     data: tasks,
-    columns: taskColumns
+    // columns: taskColumns
+    columns: taskColumnsWithoutHelper
   }
 };
