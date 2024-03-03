@@ -1,0 +1,549 @@
+{
+  "data": {
+    "id": 10,
+    "attributes": {
+      "name": "Programmation de Mathématiques par période pour CE1",
+      "shortDescription": "Voici un exemple de programmation de mathématiques pour une classe simple de CE1. Elle est conforme aux programmes en vigueur et peut être mise en place quel que soit le manuel choisi.",
+      "date": "2023-03-14",
+      "userId": "c1293f59-ce7f-4253-a372-399f81b06700",
+      "nbOfUseLanding": 89,
+      "nbOfUseInApp": 2386,
+      "schoolyearId": "33212705-1ac9-451e-8c52-43579092c677",
+      "schoolId": "a9e22e1f-3bb1-4119-b72c-5316eeafb232",
+      "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a",
+      "periodes": [
+        {
+          "id": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73",
+          "name": "Période 1",
+          "color": "lime-200",
+          "endDate": null,
+          "position": 1,
+          "startDate": null,
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        },
+        {
+          "id": "15089149-3309-4868-98f6-09ad88142458",
+          "name": "Période 2",
+          "color": "lime-300",
+          "endDate": null,
+          "position": 2,
+          "startDate": "2021-11-08T00:00:00Z",
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        },
+        {
+          "id": "7ba48b57-981d-42c7-9941-4529fe76ad7a",
+          "name": "Période 3",
+          "color": "lime-400",
+          "endDate": null,
+          "position": 3,
+          "startDate": null,
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        },
+        {
+          "id": "fb66067e-6171-43be-ac56-84c2ce7f8e83",
+          "name": "Période 4",
+          "color": "lime-500",
+          "endDate": null,
+          "position": 4,
+          "startDate": null,
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        },
+        {
+          "id": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8",
+          "name": "Période 5",
+          "color": "lime-700",
+          "endDate": null,
+          "position": 5,
+          "startDate": null,
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        }
+      ],
+      "matieres": [
+        {
+          "id": "aace495f-be41-4c5e-86ec-0f15c8ecae9e",
+          "name": " ",
+          "color": "white",
+          "domaines": [
+            {
+              "id": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+              "name": "Nombres",
+              "color": "blue-200",
+              "items": [
+                {
+                  "y": 0,
+                  "id": "6101de57-65c6-4669-a205-d9bd67a5d47d",
+                  "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 59</strong></p><ul><li>Lire &amp; écrire les nombres jusqu'à 59</li><li>Identifier les unités et les dizaines d'un nombre</li><li>Compter de 1 en 1 en avant et en arrière</li><li>Dénombrer de petites collections</li></ul>",
+                  "width": 1,
+                  "height": 8,
+                  "domaineId": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "y": 0,
+                  "id": "9277876b-5b2c-437b-95b4-bcf9ba415dac",
+                  "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 99</strong></p><ul><li>Connaître le nombre 100</li><li>Compter de 5 en 5 en avant et en arrière</li><li>Dénombrer de grandes collections</li></ul>",
+                  "width": 1,
+                  "height": 6,
+                  "domaineId": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "y": 0,
+                  "id": "45f038da-15a0-406a-8d73-58a21ae55784",
+                  "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 999</strong></p><ul><li>Lire les nombres jusqu’à 999</li><li>Identifier les unités, les dizaines, les centaines d’un nombre</li><li>Compter de 10 en 10 en avant et en arrière</li><li>Comparer et ranger les nombres jusqu’à 999</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "y": 0,
+                  "id": "62b70316-2c65-441c-ac30-7261823240af",
+                  "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 99</strong></p><ul><li>Lire &amp; écrire les nombres jusqu'à 99</li><li>Écrire les nombres jusqu'à 99</li><li>Décomposer un nombre en unités et dizaines</li><li>Compter de 2 en 2 en avant et en arrière</li><li>Comparer et ranger les nombres jusqu'à 99</li></ul><p><br></p>",
+                  "width": 1,
+                  "height": 9,
+                  "domaineId": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                },
+                {
+                  "y": 0,
+                  "id": "d936995f-cb3d-4f99-8b01-9564a39bc4ed",
+                  "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 999</strong></p><ul><li>Écrire les nombres jusqu’à 999</li><li>Décomposer un nombre en U, D, C</li><li>Compter de 100 en 100 en avant et en arrière</li><li>Encadrer les nombres jusqu’à 999</li><li>Connaitre le nombre 1000</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "6bcac154-ea35-455c-a29b-1a29ff68601b",
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                }
+              ],
+              "position": 1,
+              "matiereId": "aace495f-be41-4c5e-86ec-0f15c8ecae9e",
+              "periodContents": [
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "6101de57-65c6-4669-a205-d9bd67a5d47d",
+                      "value": "<p><strong><span style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 59</span></strong></p><ul><li>Lire &amp; écrire les nombres jusqu'à 59</li><li>Identifier les unités et les dizaines d'un nombre</li><li>Compter de 1 en 1 en avant et en arrière</li><li>Dénombrer de petites collections</li></ul>",
+                      "width": 1,
+                      "height": 8
+                    }
+                  ],
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "9277876b-5b2c-437b-95b4-bcf9ba415dac",
+                      "value": "<p><strong ><span style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 99</span></strong></p><ul><li>Connaître le nombre 100</li><li>Compter de 5 en 5 en avant et en arrière</li><li>Dénombrer de grandes collections</li></ul>",
+                      "width": 1,
+                      "height": 6
+                    }
+                  ],
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "45f038da-15a0-406a-8d73-58a21ae55784",
+                      "value": "<p><strong ><span style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 999</span></strong></p><ul><li>Lire les nombres jusqu’à 999</li><li>Identifier les unités, les dizaines, les centaines d’un nombre</li><li>Compter de 10 en 10 en avant et en arrière</li><li>Comparer et ranger les nombres jusqu’à 999</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "d936995f-cb3d-4f99-8b01-9564a39bc4ed",
+                      "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 999</strong></p><ul><li>Écrire les nombres jusqu’à 999</li><li>Décomposer un nombre en U, D, C</li><li>Compter de 100 en 100 en avant et en arrière</li><li>Encadrer les nombres jusqu’à 999</li><li>Connaitre le nombre 1000</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "62b70316-2c65-441c-ac30-7261823240af",
+                      "value": "<p><strong style=\"color: rgb(14, 165, 233);\">Nombres jusqu'à 99</strong></p><ul><li>Lire &amp; écrire les nombres jusqu'à 99</li><li>Écrire les nombres jusqu'à 99</li><li>Décomposer un nombre en unités et dizaines</li><li>Compter de 2 en 2 en avant et en arrière</li><li>Comparer et ranger les nombres jusqu'à 99</li></ul><p><br></p>",
+                      "width": 1,
+                      "height": 9
+                    }
+                  ],
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                }
+              ]
+            },
+            {
+              "id": "238d530c-762f-424f-84aa-40db48b92ed7",
+              "name": "Calculs",
+              "color": "teal-200",
+              "items": [
+                {
+                  "y": 0,
+                  "id": "3d98fe61-2c43-41dd-bae7-6faad210c8cb",
+                  "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Multiplier</strong></p><ul><li>Comprendre le sens de la multiplication</li><li>Connaître les tables de multiplication jusqu’à 5</li><li>Multiplier un nombre par 10</li><li>Connaître les petites moitiés</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "238d530c-762f-424f-84aa-40db48b92ed7",
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "y": 0,
+                  "id": "6531e404-01bc-48a5-9e61-c5017b70c6da",
+                  "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><ul><li>Effectuer une addition posée avec retenue</li><li>Effectuer une addition posée à 3 chiffres</li><li>Soustraire en ligne des nombres à 2 chiffres</li></ul>",
+                  "width": 1,
+                  "height": 6,
+                  "domaineId": "238d530c-762f-424f-84aa-40db48b92ed7",
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "y": 0,
+                  "id": "13417cdf-f77d-4f94-b81a-ea220900c964",
+                  "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><ul><li>Connaître les petits doubles</li><li>Additionner en ligne des nombres à 2 chiffres</li><li>Effectuer une addition posée sans retenue</li></ul>",
+                  "width": 1,
+                  "height": 9,
+                  "domaineId": "238d530c-762f-424f-84aa-40db48b92ed7",
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                },
+                {
+                  "y": 0,
+                  "id": "75b34bb6-a789-44a3-a25e-7a78386bb86b",
+                  "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><p><br></p><ul><li>Effectuer une soustraction posée sans retenue</li><li>Effectuer une soustraction posée avec retenue</li><li>Effectuer une soustraction posée à 3 chiffres</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "238d530c-762f-424f-84aa-40db48b92ed7",
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "y": 0,
+                  "id": "f42d068e-1c65-4fae-89e1-f985b18e8f18",
+                  "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><ul><li>Connaître les tables d'addition</li><li>Additionner mentalement de petits nombres</li><li>Soustraire mentalement de petits nombres</li></ul>",
+                  "width": 1,
+                  "height": 8,
+                  "domaineId": "238d530c-762f-424f-84aa-40db48b92ed7",
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                }
+              ],
+              "position": 2,
+              "matiereId": "aace495f-be41-4c5e-86ec-0f15c8ecae9e",
+              "periodContents": [
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "f42d068e-1c65-4fae-89e1-f985b18e8f18",
+                      "value": "<p><span style=\"color: rgb(20, 184, 166);\"><strong>Additionner &amp; soustraire</strong></span></p><ul><li>Connaître les tables d'addition</li><li>Additionner mentalement de petits nombres</li><li>Soustraire mentalement de petits nombres</li></ul>",
+                      "width": 1,
+                      "height": 8
+                    }
+                  ],
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "6531e404-01bc-48a5-9e61-c5017b70c6da",
+                      "value": "<p><span style=\"color: rgb(20, 184, 166);\" ><strong>Additionner &amp; soustraire</strong></span></p><ul><li>Effectuer une addition posée avec retenue</li><li>Effectuer une addition posée à 3 chiffres</li><li>Soustraire en ligne des nombres à 2 chiffres</li></ul>",
+                      "width": 1,
+                      "height": 6
+                    }
+                  ],
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "3d98fe61-2c43-41dd-bae7-6faad210c8cb",
+                      "value": "<p><span style=\"color: rgb(20, 184, 166);\" ><strong>Multiplier</strong></span></p><ul><li>Comprendre le sens de la multiplication</li><li>Connaître les tables de multiplication jusqu’à 5</li><li>Multiplier un nombre par 10</li><li>Connaître les petites moitiés</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "75b34bb6-a789-44a3-a25e-7a78386bb86b",
+                      "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><p><br></p><ul><li>Effectuer une soustraction posée sans retenue</li><li>Effectuer une soustraction posée avec retenue</li><li>Effectuer une soustraction posée à 3 chiffres</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "13417cdf-f77d-4f94-b81a-ea220900c964",
+                      "value": "<p><strong style=\"color: rgb(20, 184, 166);\">Additionner &amp; soustraire</strong></p><ul><li>Connaître les petits doubles</li><li>Additionner en ligne des nombres à 2 chiffres</li><li>Effectuer une addition posée sans retenue</li></ul>",
+                      "width": 1,
+                      "height": 9
+                    }
+                  ],
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                }
+              ]
+            },
+            {
+              "id": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+              "name": "Espace et géométrie",
+              "color": "yellow-200",
+              "items": [
+                {
+                  "y": 0,
+                  "id": "f0112942-9b08-4659-b8c9-c18dcc7b5a27",
+                  "value": "<p><strong style=\"color: rgb(234, 179, 8);\">La symétrie</strong></p><ul><li>Identifier des axes de symétrie</li><li>Compléter ou reproduire une figure par symétrie</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "y": 0,
+                  "id": "8d45c888-9411-4bd0-a4db-fe440c22a77e",
+                  "value": "<p><strong style=\"color: rgb(234, 179, 8);\">Les solides</strong></p><ul><li>Identifier et décrire le cube et le pavé droit</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "y": 0,
+                  "id": "e2282856-6b24-454d-9e26-c8b712611d5f",
+                  "value": "<p><strong style=\"color: rgb(234, 179, 8);\">Déplacement dans l'espace</strong></p><ul><li>Se repérer et se déplacer sur un quadrillage (cases et nœuds)</li></ul>",
+                  "width": 1,
+                  "height": 6,
+                  "domaineId": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "y": 0,
+                  "id": "09089345-ccce-4acb-b18c-9bcf3a9bd0ec",
+                  "value": "<p><strong style=\"color: rgb(234, 179, 8);\">Tracés à la règle</strong></p><ul><li>Tracer des traits avec précision</li></ul><p><strong style=\"color: rgb(234, 179, 8);\">Repérage dans l'espace</strong></p><ul><li>Identifier des points alignés</li></ul><p><strong style=\"color: rgb(234, 179, 8);\">Droites et segments</strong></p><ul><li>Différencier droite et segment</li></ul>",
+                  "width": 1,
+                  "height": 8,
+                  "domaineId": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "y": 0,
+                  "id": "c32a9c11-f343-4c10-83f5-3044e3894bce",
+                  "value": "<p><br></p><p><strong style=\"color: rgb(234, 179, 8);\">Les polygones</strong></p><ul><li>Identifier et reproduire des polygones (carré, rectangle, triangle rectangle)</li><li>Identifier et tracer des angles droits</li></ul><p><strong style=\"color: rgb(234, 179, 8);\">Reproduction sur quadrillage</strong></p><ul><li>Reproduire des figures planes sur un quadrillage</li></ul>",
+                  "width": 1,
+                  "height": 9,
+                  "domaineId": "ddf42d90-524a-4a4d-aa1e-4703001b8c75",
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                }
+              ],
+              "position": 3,
+              "matiereId": "aace495f-be41-4c5e-86ec-0f15c8ecae9e",
+              "periodContents": [
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "e2282856-6b24-454d-9e26-c8b712611d5f",
+                      "value": "<p id=\"isPasted\"><strong><span style=\"color: rgb(234, 179, 8);\">Déplacement dans l'espace</span></strong></p><ul><li>Se repérer et se déplacer sur un quadrillage (cases et nœuds)</li></ul>",
+                      "width": 1,
+                      "height": 6
+                    }
+                  ],
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "09089345-ccce-4acb-b18c-9bcf3a9bd0ec",
+                      "value": "<p><strong ><span style=\"color: rgb(234, 179, 8);\">Tracés à la règle</span></strong></p><ul><li>Tracer des traits avec précision</li></ul><p><strong ><span style=\"color: rgb(234, 179, 8);\">Repérage dans l'espace</span></strong></p><ul><li>Identifier des points alignés</li></ul><p><strong ><span style=\"color: rgb(234, 179, 8);\">Droites et segments</span></strong></p><ul><li>Différencier droite et segment</li></ul>",
+                      "width": 1,
+                      "height": 8
+                    }
+                  ],
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "8d45c888-9411-4bd0-a4db-fe440c22a77e",
+                      "value": "<p ><strong><span style=\"color: rgb(234, 179, 8);\">Les solides</span></strong></p><ul><li>Identifier et décrire le cube et le pavé droit</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "f0112942-9b08-4659-b8c9-c18dcc7b5a27",
+                      "value": "<p ><strong><span style=\"color: rgb(234, 179, 8);\">La symétrie</span></strong></p><ul><li>Identifier des axes de symétrie</li><li>Compléter ou reproduire une figure par symétrie</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "c32a9c11-f343-4c10-83f5-3044e3894bce",
+                      "value": "<p><br></p><p><strong style=\"color: rgb(234, 179, 8);\">Les polygones</strong></p><ul><li>Identifier et reproduire des polygones (carré, rectangle, triangle rectangle)</li><li>Identifier et tracer des angles droits</li></ul><p><strong style=\"color: rgb(234, 179, 8);\">Reproduction sur quadrillage</strong></p><ul><li>Reproduire des figures planes sur un quadrillage</li></ul>",
+                      "width": 1,
+                      "height": 9
+                    }
+                  ],
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                }
+              ]
+            },
+            {
+              "id": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+              "name": "Grandeurs et mesures",
+              "color": "red-200",
+              "items": [
+                {
+                  "y": 0,
+                  "id": "594324e3-5d2e-47fa-a32d-6c652a0876b3",
+                  "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Masse</strong></p><ul><li>Connaître les unités de masse et leur relation (gramme / kilogramme)</li><li>Peser des objets</li></ul>",
+                  "width": 1,
+                  "height": 9,
+                  "domaineId": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                },
+                {
+                  "y": 0,
+                  "id": "8e2c8b36-ede3-4f59-8caa-dd16e44043f8",
+                  "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Longueur</strong></p><ul><li>Connaître les unités de longueur et leur relation (mètre et centimètre)</li><li>Utiliser les unités de longeur poiur mesurer des lignes brisées</li></ul>",
+                  "width": 1,
+                  "height": 8,
+                  "domaineId": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "y": 0,
+                  "id": "437fd443-5149-4e94-9e5a-dcac455a3170",
+                  "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Temps</strong></p><ul><li>Connaître les unités de durée et leur relation (jour / heure / minute)</li><li>Comparer des durées</li></ul>",
+                  "width": 1,
+                  "height": 6,
+                  "domaineId": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                },
+                {
+                  "y": 0,
+                  "id": "e4079220-fd36-4ea1-b990-e976c239270b",
+                  "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Monnaie</strong></p><ul><li>Connaître la monnaie € pour payer et faire l’appoint</li><li>Rendre la monnaie</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "y": 0,
+                  "id": "931d541f-a69f-48c1-9d5a-ece1117946e2",
+                  "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Temps</strong></p><ul><li>Lire les heures piles, demi et quart d'heure</li></ul>",
+                  "width": 1,
+                  "height": 7,
+                  "domaineId": "ef742bbb-9ec2-49b6-8ad6-4cb18f379e98",
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                }
+              ],
+              "position": 4,
+              "matiereId": "aace495f-be41-4c5e-86ec-0f15c8ecae9e",
+              "periodContents": [
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "8e2c8b36-ede3-4f59-8caa-dd16e44043f8",
+                      "value": "<p><strong id=\"isPasted\"><span style=\"color: rgb(239, 68, 68);\">Longueur</span></strong></p><ul><li>Connaître les unités de longueur et leur relation (mètre et centimètre)</li><li>Utiliser les unités de longeur poiur mesurer des lignes brisées</li></ul>",
+                      "width": 1,
+                      "height": 8
+                    }
+                  ],
+                  "periodeId": "2fb02f7c-be9f-46f8-8ad8-902921a8ff73"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "e4079220-fd36-4ea1-b990-e976c239270b",
+                      "value": "<p id=\"isPasted\"><strong><span style=\"color: rgb(239, 68, 68);\">Monnaie</span></strong></p><ul><li>Connaître la monnaie € pour payer et faire l’appoint</li><li>Rendre la monnaie</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "fb66067e-6171-43be-ac56-84c2ce7f8e83"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "931d541f-a69f-48c1-9d5a-ece1117946e2",
+                      "value": "<p ><strong><span style=\"color: rgb(239, 68, 68);\">Temps</span></strong></p><ul><li>Lire les heures piles, demi et quart d'heure</li></ul>",
+                      "width": 1,
+                      "height": 7
+                    }
+                  ],
+                  "periodeId": "b4b1edcd-ba67-4a6c-aa04-5ff39808a2d8"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "594324e3-5d2e-47fa-a32d-6c652a0876b3",
+                      "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Masse</strong></p><ul><li>Connaître les unités de masse et leur relation (gramme / kilogramme)</li><li>Peser des objets</li></ul>",
+                      "width": 1,
+                      "height": 9
+                    }
+                  ],
+                  "periodeId": "15089149-3309-4868-98f6-09ad88142458"
+                },
+                {
+                  "items": [
+                    {
+                      "y": 0,
+                      "id": "437fd443-5149-4e94-9e5a-dcac455a3170",
+                      "value": "<p><strong style=\"color: rgb(239, 68, 68);\">Temps</strong></p><ul><li>Connaître les unités de durée et leur relation (jour / heure / minute)</li><li>Comparer des durées</li></ul>",
+                      "width": 1,
+                      "height": 6
+                    }
+                  ],
+                  "periodeId": "7ba48b57-981d-42c7-9941-4529fe76ad7a"
+                }
+              ]
+            }
+          ],
+          "position": 0,
+          "programmationId": "1c6ecce2-968d-47fc-8b73-14f13d58779a"
+        }
+      ],
+      "columnWidth": 0,
+      "fontSize": "",
+      "view": "periode",
+      "invertedRowCol": true,
+      "niveau": "",
+      "createdAt": "2023-04-03T15:05:56.296Z",
+      "updatedAt": "2024-03-03T14:24:14.645Z",
+      "publishedAt": "2023-04-06T13:58:46.222Z",
+      "description": "<p>Voici un exemple de programmation/progression de mathématiques pour une classe simple de CE1.</p><p>Elle est conforme aux programmes en vigueur et peut être mise en place quel que soit le manuel choisi. <strong>Testé par les élèves, validée par une maîtresse !</strong></p><p>Vous pouvez trouver tout le détail de cette programmation plus bas.&nbsp; Et si cette programmation vous plaît, vous pouvez la récupérer et la modifier directement sur Teetsh en cliquant sur “Utiliser ce modèle” 👇.</p>",
+      "onePageMatiere": null
+    }
+  },
+  "meta": {}
+}
