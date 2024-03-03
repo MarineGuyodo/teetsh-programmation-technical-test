@@ -24,7 +24,7 @@ export const ThemeProviderContext =
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  storageKey = import.meta.env.VITE_LOCAL_STORAGE_KEY_PREFIX + "mode",
+  storageKey = import.meta.env.VITE_LOCAL_STORAGE_KEY_PREFIX + "theme",
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
