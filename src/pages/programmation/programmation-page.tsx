@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 // SERVICES
 import { getProgrammation } from "@/services/programmations.services";
+import { domaines, domaineViewColumns } from "@/stories/tables/domaine-view";
 
 // COMPONENTS
 import { ProgrammationTable } from "@/pages/programmation/components/programmation-table";
@@ -15,7 +16,7 @@ function ProgrammationPage() {
     error
   } = useQuery({
     queryKey: ["programmation"],
-    queryFn: async () => await getProgrammation(10),
+    queryFn: async () => await getProgrammation(),
     staleTime: Infinity
   });
 
@@ -28,7 +29,11 @@ function ProgrammationPage() {
       {isError && <div>Oups ! {error.message}</div>}
 
       {!isLoading && !isError && !!programmation && (
-        <ProgrammationTable columns={[]} data={[]} />
+        <ProgrammationTable
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          columns={domaineViewColumns as any[]}
+          data={domaines}
+        />
       )}
     </div>
   );

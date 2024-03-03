@@ -31,13 +31,18 @@ export function ProgrammationTable<TData, TValue>({
 
   return (
     <div className="rounded-md border">
-      <Table>
+      <Table data-testid="data-table">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
+              {headerGroup.headers.map((header, index) => {
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead
+                    key={header.id}
+                    data-testid={
+                      index === 0 ? "origin-header" : "column-header"
+                    }
+                  >
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -53,17 +58,21 @@ export function ProgrammationTable<TData, TValue>({
         <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id}>
+              <TableRow key={row.id} data-testid="data-row">
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
+                  <TableCell key={cell.id} data-testid="data-cell">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
               </TableRow>
             ))
           ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+            <TableRow data-testid="data-row--empty">
+              <TableCell
+                colSpan={columns.length}
+                className="h-24 text-center"
+                data-testid="data-cell--empty"
+              >
                 Cette programmation est encore vide.
               </TableCell>
             </TableRow>
