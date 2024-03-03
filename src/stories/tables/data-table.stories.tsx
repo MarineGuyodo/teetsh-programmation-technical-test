@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-// import { createColumnHelper } from "@tanstack/react-table";
+import { createColumnHelper } from "@tanstack/react-table";
 
 import { DataTable } from "@/components/data-table";
 
@@ -62,27 +62,30 @@ const tasks: Task[] = [
   { id: 3, name: "Third task", description: "test..." }
 ];
 
-// const assignations = [
-//   { name: "Monday", taskId: 2 },
-//   { name: "Tuesday", taskId: 3 },
-//   { name: "Wednesday", taskId: 2 },
-//   { name: "Thursday", taskId: 1 }
-// ];
-
-// const helper = createColumnHelper<Task>();
-
-// const taskColumns = [helper.accessor("name", { header: "Task" })];
-
-const taskColumnsWithoutHelper = [
-  { accessorKey: "id", header: "ID" },
-  { accessorKey: "name", header: "Task" },
-  { accessorKey: "description", header: "Description" }
+const assignations = [
+  { name: "Monday", taskId: 2 },
+  { name: "Tuesday", taskId: 3 },
+  { name: "Wednesday", taskId: 2 },
+  { name: "Thursday", taskId: 1 }
 ];
+
+const helper = createColumnHelper<Task>();
+
+const taskColumns = [
+  helper.accessor("name", { header: "Task" }),
+  ...assignations.map((day) =>
+    helper.accessor((row) => day.taskId === row.id, {
+      header: day.name,
+      cell: (cell) =>
+        cell.getValue() ? <p className="p-4 text-center">X</p> : undefined
+    })
+  )
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+] as any[];
 
 export const TwoDimensions: Story = {
   args: {
     data: tasks,
-    // columns: taskColumns
-    columns: taskColumnsWithoutHelper
+    columns: taskColumns
   }
 };
