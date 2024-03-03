@@ -24,7 +24,20 @@ type Story = StoryObj<typeof meta>;
 export const Empty: Story = {
   args: {
     data: [],
-    columns: []
+    columns: [
+      {
+        accessorKey: "domaine.name",
+        header: "Domaine"
+      },
+      {
+        accessorKey: "some_imaginary_periode.name",
+        header: "Periode 1"
+      },
+      {
+        accessorKey: "another_imaginary_periode.name",
+        header: "Etc."
+      }
+    ]
   }
 };
 

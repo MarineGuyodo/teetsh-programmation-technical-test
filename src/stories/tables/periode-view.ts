@@ -1,5 +1,8 @@
 import { createColumnHelper } from "@tanstack/react-table";
 
+import { ItemCell } from "@/pages/programmation/components/item-cell";
+import { TitleCell } from "@/pages/programmation/components/title-cell";
+
 import faker from "@/services/fakers/response.faker.json";
 import { Periode, Domaine, Item } from "@/services/fakers/inferred-types.faker";
 
@@ -18,11 +21,14 @@ const findItemByDomaineId = (domaineId: string) => (row: Periode) =>
   );
 
 const periodeViewColumns = [
-  periodeColumnHelper.accessor("name", { header: "Période" }),
+  periodeColumnHelper.accessor("name", {
+    header: "Période",
+    cell: TitleCell("periode")
+  }),
   ...domaines.map((domaine) =>
     periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
       header: domaine.name,
-      cell: ({ getValue }) => getValue()?.value || "Vide..."
+      cell: ItemCell
     })
   )
 ];
