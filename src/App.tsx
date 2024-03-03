@@ -1,4 +1,5 @@
 import { ModeToggle } from "./components/mode-toggle";
+import ProgrammationPage from "./pages/programmation-page";
 
 function App() {
   return (
@@ -7,6 +8,10 @@ function App() {
         <h1 className="font-extrabold">Teetsh</h1>
         <ModeToggle />
       </header>
+
+      <main className="mt-0 grow overflow-hidden">
+        <ProgrammationPage />
+      </main>
     </div>
   );
 }
