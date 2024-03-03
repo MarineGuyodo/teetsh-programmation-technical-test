@@ -11,9 +11,8 @@ async function getProgrammation(id: number): Promise<Programmation> {
       }
     }
   );
-  const { data, meta } = await response.json();
+  const { data } = await response.json();
 
-  console.log("META:", meta, "ID:", id);
   return data;
 }
 

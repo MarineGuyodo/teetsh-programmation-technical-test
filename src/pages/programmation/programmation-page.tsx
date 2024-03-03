@@ -25,12 +25,16 @@ function ProgrammationPage() {
     useProgrammation(programmation);
 
   return (
-    <div className="flex h-full w-full flex-col p-8 pt-0">
+    <div className="flex h-full w-full flex-col items-center justify-evenly p-8 pt-0">
       {isLoading && <div>Chargement en cours...</div>}
 
       {isError && <div>Oups ! {error.message}</div>}
 
-      <Button onClick={handleToggleView} data-testid="view-toggle">
+      <Button
+        onClick={handleToggleView}
+        className="my-4"
+        data-testid="view-toggle"
+      >
         Par {view === "domaine" ? "période" : "domaine"}
       </Button>
 
