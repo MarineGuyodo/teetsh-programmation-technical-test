@@ -1,12 +1,15 @@
 import { useMemo, useState } from "react";
 
 import { createColumnHelper } from "@tanstack/react-table";
+
 import {
   Programmation,
   Periode,
   Domaine,
   Item
 } from "@/services/fakers/inferred-types.faker";
+
+import { ItemCell } from "../components/item-cell";
 
 type View = "domaine" | "periode";
 
@@ -60,7 +63,7 @@ const generateDomaineViewColumns = (programmation: Programmation) => {
     ...periodes.map((periode) =>
       domaineColumnHelper.accessor(findItemByPeriodeId(periode.id), {
         header: periode.name,
-        cell: ({ getValue }) => getValue()?.value || "Vide..."
+        cell: ItemCell
       })
     )
   ];
@@ -85,7 +88,7 @@ const generatePeriodeViewColumns = (programmation: Programmation) => {
     ...domaines.map((domaine) =>
       periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
         header: domaine.name,
-        cell: ({ getValue }) => getValue()?.value || "Vide..."
+        cell: ItemCell
       })
     )
   ];
