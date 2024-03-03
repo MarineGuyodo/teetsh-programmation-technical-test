@@ -1,5 +1,5 @@
 import { ModeToggle } from "./components/mode-toggle";
-import ProgrammationPage from "./pages/programmation-page";
+import ProgrammationPage from "./pages/programmation/programmation-page";
 
 function App() {
   return (
