@@ -8,7 +8,6 @@ import { getProgrammation } from "@/services/programmations.services";
 // COMPONENTS
 import { Loader } from "@/components/ui/loader";
 import { Error } from "@/components/ui/error";
-import { Button } from "@/components/ui/button";
 import { ProgrammationTable } from "@/pages/programmation/components/programmation-table";
 
 function ProgrammationPage() {
@@ -27,22 +26,19 @@ function ProgrammationPage() {
     useProgrammation(programmation);
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-evenly p-8 pt-0">
-      {isLoading && <Loader />}
+    <div className="flex h-full w-full flex-col items-center rounded-lg border md:bg-muted md:p-2 md:shadow-lg lg:p-4">
+      {(isLoading || isError) && (
+        <div className="flex h-full w-full flex-col items-center justify-center rounded-md bg-gradient-to-tr from-background/75 to-background">
+          {isLoading && <Loader />}
 
-      {isError && <Error message={error?.message} />}
+          {isError && <Error message={error?.message} />}
+        </div>
+      )}
 
-      {!isLoading && !isError && !!programmation && (
+      {!isLoading && !isError && programmation && (
         <>
-          <Button
-            onClick={handleToggleView}
-            className="my-4"
-            data-testid="view-toggle"
-          >
-            Par {view === "domaine" ? "période" : "domaine"}
-          </Button>
-
-          <ProgrammationTable columns={columns} data={data} />
+          <ProgrammationTable {...{ columns, data, view, handleToggleView }} />
+          <div className="flex w-full grow flex-col justify-end border bg-neutral-50 dark:bg-neutral-900" />
         </>
       )}
     </div>

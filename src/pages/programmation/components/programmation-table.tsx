@@ -16,14 +16,24 @@ import {
   TableRow
 } from "@/components/ui/table";
 
+import { Button } from "@/components/ui/button";
+
+import { ArrowUpDownIcon } from "lucide-react";
+
+import { View } from "@/pages/programmation/hooks/useProgrammation";
+
 interface ProgrammationTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  view?: View;
+  handleToggleView?: () => void;
 }
 
 export function ProgrammationTable<TData, TValue>({
   columns,
-  data
+  data,
+  view,
+  handleToggleView
 }: ProgrammationTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -32,8 +42,11 @@ export function ProgrammationTable<TData, TValue>({
   });
 
   return (
-    <Table className="h-full overflow-scroll border" data-testid="data-table">
-      <TableHeader className="sticky top-0 z-50 h-20 bg-muted/75 backdrop-blur-md">
+    <Table
+      className="h-full overflow-scroll border bg-neutral-50 dark:bg-neutral-900"
+      data-testid="data-table"
+    >
+      <TableHeader className="sticky top-0 z-10 before:absolute before:-inset-y-[1px] before:inset-x-0 before:-z-10 before:bg-neutral-200/75 before:backdrop-blur-md dark:before:bg-neutral-700/75">
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header, index) => {
@@ -41,14 +54,24 @@ export function ProgrammationTable<TData, TValue>({
                 <TableHead
                   key={header.id}
                   className="text-center"
-                  data-testid={index === 0 ? "origin-header" : "column-header"}
+                  data-testid="column-header"
                 >
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
+                  {index === 0 && view && handleToggleView ? (
+                    <Button
+                      onClick={handleToggleView}
+                      className="group w-full"
+                      variant="ghost"
+                      data-testid="view-toggle"
+                    >
+                      {view}
+                      <ArrowUpDownIcon className="ml-2 transition-all group-hover:rotate-90" />
+                    </Button>
+                  ) : header.isPlaceholder ? null : (
+                    flexRender(
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )
+                  )}
                 </TableHead>
               );
             })}

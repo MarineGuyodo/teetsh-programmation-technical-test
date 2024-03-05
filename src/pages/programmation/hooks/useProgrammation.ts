@@ -12,7 +12,7 @@ import {
 import { ItemCell } from "../components/item-cell";
 import { TitleCell } from "../components/title-cell";
 
-type View = "domaine" | "periode";
+export type View = "domaine" | "periode";
 
 function useProgrammation(programmation?: Programmation) {
   const [view, setView] = useState<View>("domaine");
