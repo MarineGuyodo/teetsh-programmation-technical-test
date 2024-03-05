@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { ProgrammationTable } from "@/pages/programmation/components/programmation-table";
 
+import type { ColumnDef } from "@tanstack/react-table";
+
 import { domaines, domaineViewColumns } from "./domaine-view";
 import { periodes, periodeViewColumns } from "./periode-view";
 
@@ -44,15 +46,13 @@ export const Empty: Story = {
 export const DomaineView: Story = {
   args: {
     data: domaines,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    columns: domaineViewColumns as any[]
+    columns: domaineViewColumns as ColumnDef<unknown>[]
   }
 };
 
 export const PeriodeView: Story = {
   args: {
     data: periodes,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    columns: periodeViewColumns as any[]
+    columns: periodeViewColumns as ColumnDef<unknown>[]
   }
 };

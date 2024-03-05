@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { createColumnHelper } from "@tanstack/react-table";
+import { createColumnHelper, type ColumnDef } from "@tanstack/react-table";
 
 import { DataTable } from "@/components/data-table";
 
@@ -80,8 +80,7 @@ const taskColumns = [
         cell.getValue() ? <p className="p-4 text-center">X</p> : undefined
     })
   )
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-] as any[];
+] as ColumnDef<unknown>[];
 
 export const TwoDimensions: Story = {
   args: {

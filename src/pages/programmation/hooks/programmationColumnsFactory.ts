@@ -1,3 +1,4 @@
+// HELPERS
 import { createColumnHelper } from "@tanstack/react-table";
 
 // COMPONENTS
@@ -5,6 +6,7 @@ import { ItemCell } from "../components/item-cell";
 import { TitleCell } from "../components/title-cell";
 
 // TYPES AND ENUMS
+import type { ColumnDef } from "@tanstack/react-table";
 import type {
   Programmation,
   Periode,
@@ -67,7 +69,7 @@ const generateDomaineViewColumns = (programmation: Programmation) => {
 const generateColumns = (programmation: Programmation, view: View) => {
   return (
     view === "PERIODE" ? generatePeriodeViewColumns : generateDomaineViewColumns
-  )(programmation);
+  )(programmation) as ColumnDef<unknown>[];
 };
 
 export { generateColumns };

@@ -15,10 +15,8 @@ function useProgrammation(programmation?: Programmation) {
   const { data, columns } = useMemo(() => {
     if (!programmation)
       return {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        data: [] as any[],
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        columns: [] as any[]
+        data: [],
+        columns: []
       };
 
     return {
