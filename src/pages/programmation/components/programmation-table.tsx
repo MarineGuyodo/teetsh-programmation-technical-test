@@ -20,7 +20,10 @@ import { Button } from "@/components/ui/button";
 
 import { ArrowUpDownIcon } from "lucide-react";
 
-import { View } from "@/pages/programmation/hooks/useProgrammation";
+import {
+  ProgrammationView as View,
+  FR_PROGRAMMATION_VIEWS as VIEWS
+} from "@/enums/views";
 
 interface ProgrammationTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -44,7 +47,7 @@ export function ProgrammationTable<TData, TValue>({
   return (
     <Table
       className="h-full overflow-scroll border bg-neutral-50 dark:bg-neutral-900"
-      data-testid="data-table"
+      data-testid="programmation-table"
     >
       <TableHeader className="sticky top-0 z-10 before:absolute before:-inset-y-[1px] before:inset-x-0 before:-z-10 before:bg-neutral-200/75 before:backdrop-blur-md dark:before:bg-neutral-700/75">
         {table.getHeaderGroups().map((headerGroup) => (
@@ -63,7 +66,7 @@ export function ProgrammationTable<TData, TValue>({
                       variant="ghost"
                       data-testid="view-toggle"
                     >
-                      {view}
+                      {VIEWS[view]}
                       <ArrowUpDownIcon className="ml-2 transition-all group-hover:rotate-90" />
                     </Button>
                   ) : header.isPlaceholder ? null : (

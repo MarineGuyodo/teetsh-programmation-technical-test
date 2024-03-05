@@ -4,8 +4,10 @@ import { Row } from "@tanstack/react-table";
 import { Periode } from "@/services/fakers/inferred-types.faker";
 import { Domaine } from "@/services/fakers/inferred-types.faker";
 
+import type { ProgrammationView as View } from "@/enums/views";
+
 export const TitleCell =
-  (type?: "domaine" | "periode") =>
+  (view?: View) =>
   ({
     row: {
       original: { name, color }
@@ -16,8 +18,8 @@ export const TitleCell =
     <div
       className={cn(
         "h-full text-balance p-4 text-center font-bold dark:text-black",
-        type === "domaine" && "dark:bg-opacity-75",
-        type === "periode" && "flex items-center justify-center",
+        view === "DOMAINE" && "dark:bg-opacity-75",
+        view === "PERIODE" && "flex items-center justify-center",
         "bg-" + color
       )}
     >

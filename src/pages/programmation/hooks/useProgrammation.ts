@@ -12,20 +12,23 @@ import {
 import { ItemCell } from "../components/item-cell";
 import { TitleCell } from "../components/title-cell";
 
-export type View = "domaine" | "periode";
+import {
+  FR_PROGRAMMATION_VIEWS,
+  ProgrammationView as View
+} from "@/enums/views";
 
 function useProgrammation(programmation?: Programmation) {
-  const [view, setView] = useState<View>("domaine");
+  const [view, setView] = useState<View>("PERIODE");
 
   const handleToggleView = () =>
     setView((previousView) =>
-      previousView === "domaine" ? "periode" : "domaine"
+      previousView === "PERIODE" ? "DOMAINE" : "PERIODE"
     );
 
   const data = useMemo(() => {
     if (!programmation) return [];
 
-    return view === "domaine"
+    return view === "DOMAINE"
       ? programmation.attributes.matieres[0].domaines
       : programmation.attributes.periodes;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,7 +37,7 @@ function useProgrammation(programmation?: Programmation) {
   const columns = useMemo(() => {
     if (!programmation) return [];
 
-    return view === "domaine"
+    return view === "DOMAINE"
       ? generateDomaineViewColumns(programmation)
       : generatePeriodeViewColumns(programmation);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,29 +52,6 @@ function useProgrammation(programmation?: Programmation) {
 }
 
 export default useProgrammation;
-
-// DOMAINE VIEW
-const generateDomaineViewColumns = (programmation: Programmation) => {
-  const periodes = programmation.attributes.periodes;
-
-  const domaineColumnHelper = createColumnHelper<Domaine>();
-
-  const findItemByPeriodeId = (periodeId: string) => (row: Domaine) =>
-    row.items.find((item: Item) => item.periodeId === periodeId);
-
-  return [
-    domaineColumnHelper.accessor("name", {
-      header: "Domaine",
-      cell: TitleCell("domaine")
-    }),
-    ...periodes.map((periode) =>
-      domaineColumnHelper.accessor(findItemByPeriodeId(periode.id), {
-        header: periode.name,
-        cell: ItemCell
-      })
-    )
-  ];
-};
 
 // PERIODE VIEW
 const generatePeriodeViewColumns = (programmation: Programmation) => {
@@ -89,12 +69,35 @@ const generatePeriodeViewColumns = (programmation: Programmation) => {
 
   return [
     periodeColumnHelper.accessor("name", {
-      header: "Période",
-      cell: TitleCell("periode")
+      header: FR_PROGRAMMATION_VIEWS.PERIODE,
+      cell: TitleCell("PERIODE")
     }),
     ...domaines.map((domaine) =>
       periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
         header: domaine.name,
+        cell: ItemCell
+      })
+    )
+  ];
+};
+
+// DOMAINE VIEW
+const generateDomaineViewColumns = (programmation: Programmation) => {
+  const periodes = programmation.attributes.periodes;
+
+  const domaineColumnHelper = createColumnHelper<Domaine>();
+
+  const findItemByPeriodeId = (periodeId: string) => (row: Domaine) =>
+    row.items.find((item: Item) => item.periodeId === periodeId);
+
+  return [
+    domaineColumnHelper.accessor("name", {
+      header: FR_PROGRAMMATION_VIEWS.DOMAINE,
+      cell: TitleCell("DOMAINE")
+    }),
+    ...periodes.map((periode) =>
+      domaineColumnHelper.accessor(findItemByPeriodeId(periode.id), {
+        header: periode.name,
         cell: ItemCell
       })
     )

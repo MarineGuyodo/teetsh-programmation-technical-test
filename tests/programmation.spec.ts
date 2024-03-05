@@ -1,11 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-enum VIEWS {
-  "DOMAINE" = "Par domaine",
-  "PERIODE" = "Par période",
-  "DOMAINE_ORIGIN" = "Domaine",
-  "PERIODE_ORIGIN" = "Période"
-}
+import { FR_PROGRAMMATION_VIEWS as VIEWS } from "../src/enums/views";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
@@ -13,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe("Programmation page", () => {
   test("has data table", async ({ page }) => {
-    const table = await page.getByTestId("data-table");
+    const table = await page.getByTestId("programmation-table");
     await expect(table).toBeVisible();
   });
 
@@ -23,32 +18,32 @@ test.describe("Programmation page", () => {
   });
 
   test("can switch view", async ({ page }) => {
-    const originHeader = await page.getByTestId("origin-header");
     const toggle = await page.getByTestId("view-toggle");
 
     // Initial state
-    await expect(originHeader).toHaveText(VIEWS.DOMAINE_ORIGIN);
     await expect(toggle).toHaveText(VIEWS.PERIODE);
     await expect(toggle).toBeEnabled();
 
     // Switch to periode view
     await toggle.click();
-    await expect(originHeader).toHaveText(VIEWS.PERIODE_ORIGIN);
     await expect(toggle).toHaveText(VIEWS.DOMAINE);
     await expect(toggle).toBeEnabled();
 
     // Switch back to domaine view
     await toggle.click();
-    await expect(originHeader).toHaveText(VIEWS.DOMAINE_ORIGIN);
     await expect(toggle).toHaveText(VIEWS.PERIODE);
     await expect(toggle).toBeEnabled();
   });
 });
 
 test.describe("Domaine view", () => {
-  test("has 5 columns", async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
+    await page.getByTestId("view-toggle").click();
+  });
+
+  test("has 6 columns", async ({ page }) => {
     const columns = await page.getByTestId("column-header");
-    await expect(columns).toHaveCount(5);
+    await expect(columns).toHaveCount(6);
   });
 
   test("has 4 rows", async ({ page }) => {
@@ -60,16 +55,30 @@ test.describe("Domaine view", () => {
     const items = await page.getByTestId("data-cell");
     await expect(items).toHaveCount(24);
   });
+
+  test("has correct headers", async ({ page }) => {
+    const headers = [VIEWS.DOMAINE, ...periodes];
+
+    for (const header of await page.getByTestId("column-header").all()) {
+      await expect(header).toHaveText(headers[0]);
+      headers.shift();
+    }
+  });
+
+  test("has correct rows titles", async ({ page }) => {
+    const titles = [...domaines];
+
+    for (const row of await page.getByTestId("data-row").all()) {
+      await expect(row.getByTestId("data-cell").first()).toHaveText(titles[0]);
+      titles.shift();
+    }
+  });
 });
 
 test.describe("Periode view", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.getByTestId("view-toggle").click();
-  });
-
-  test("has 4 columns", async ({ page }) => {
+  test("has 5 columns", async ({ page }) => {
     const columns = await page.getByTestId("column-header");
-    await expect(columns).toHaveCount(4);
+    await expect(columns).toHaveCount(5);
   });
 
   test("has 5 rows", async ({ page }) => {
@@ -81,4 +90,39 @@ test.describe("Periode view", () => {
     const items = await page.getByTestId("data-cell");
     await expect(items).toHaveCount(25);
   });
+
+  test("has correct headers", async ({ page }) => {
+    const headers = [VIEWS.PERIODE, ...domaines];
+
+    for (const header of await page.getByTestId("column-header").all()) {
+      await expect(header).toHaveText(headers[0]);
+      headers.shift();
+    }
+  });
+
+  test("has correct rows titles", async ({ page }) => {
+    const titles = [...periodes];
+
+    for (const row of await page.getByTestId("data-row").all()) {
+      await expect(row.getByTestId("data-cell").first()).toHaveText(titles[0]);
+      titles.shift();
+    }
+  });
 });
+
+// FIXTURES
+
+const domaines = [
+  "Nombres",
+  "Calculs",
+  "Espace et géométrie",
+  "Grandeurs et mesures"
+];
+
+const periodes = [
+  "Période 1",
+  "Période 2",
+  "Période 3",
+  "Période 4",
+  "Période 5"
+];
