@@ -1,7 +1,7 @@
 import parse from "html-react-parser";
 
-import { Getter } from "@tanstack/react-table";
-import { Item } from "@/services/fakers/inferred-types.faker";
+import type { Getter } from "@tanstack/react-table";
+import type { Item } from "@/services/fakers/inferred-types.faker";
 
 export const ItemCell = ({ getValue }: { getValue: Getter<Item> }) => {
   const content = getValue()?.value;

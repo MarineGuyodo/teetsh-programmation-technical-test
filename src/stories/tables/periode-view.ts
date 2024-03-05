@@ -1,10 +1,20 @@
+// HELPERS
 import { createColumnHelper } from "@tanstack/react-table";
 
+// COMPONENTS
 import { ItemCell } from "@/pages/programmation/components/item-cell";
 import { TitleCell } from "@/pages/programmation/components/title-cell";
 
+// TYPES
+import type {
+  Periode,
+  Domaine,
+  Item
+} from "@/services/fakers/inferred-types.faker";
+import { FR_PROGRAMMATION_VIEWS } from "@/enums/views";
+
+// DATA
 import faker from "@/services/fakers/response.faker.json";
-import { Periode, Domaine, Item } from "@/services/fakers/inferred-types.faker";
 
 const domaines = faker.data.attributes.matieres[0].domaines as Domaine[];
 
@@ -22,8 +32,8 @@ const findItemByDomaineId = (domaineId: string) => (row: Periode) =>
 
 const periodeViewColumns = [
   periodeColumnHelper.accessor("name", {
-    header: "Période",
-    cell: TitleCell("periode")
+    header: FR_PROGRAMMATION_VIEWS.PERIODE,
+    cell: TitleCell("PERIODE")
   }),
   ...domaines.map((domaine) =>
     periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {

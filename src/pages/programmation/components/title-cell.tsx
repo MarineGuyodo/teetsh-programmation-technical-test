@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
 
-import { Row } from "@tanstack/react-table";
-import { Periode } from "@/services/fakers/inferred-types.faker";
-import { Domaine } from "@/services/fakers/inferred-types.faker";
+import type { Row } from "@tanstack/react-table";
+import type { Periode, Domaine } from "@/services/fakers/inferred-types.faker";
 
 import type { ProgrammationView as View } from "@/enums/views";
 

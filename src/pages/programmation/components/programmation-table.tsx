@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 
 import {
-  ColumnDef,
   flexRender,
   getCoreRowModel,
-  useReactTable
+  useReactTable,
+  type ColumnDef
 } from "@tanstack/react-table";
 
 import {
@@ -21,8 +21,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpDownIcon } from "lucide-react";
 
 import {
-  ProgrammationView as View,
-  FR_PROGRAMMATION_VIEWS as VIEWS
+  FR_PROGRAMMATION_VIEWS as VIEWS,
+  type ProgrammationView as View
 } from "@/enums/views";
 
 interface ProgrammationTableProps<TData, TValue> {

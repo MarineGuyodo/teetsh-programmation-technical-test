@@ -1,4 +1,4 @@
-import faker from "@/services/fakers/response.faker.json";
+import type faker from "@/services/fakers/response.faker.json";
 
 export type Programmation = typeof faker.data;
 

@@ -1,4 +1,4 @@
-import { Programmation } from "@/services/fakers/inferred-types.faker";
+import type { Programmation } from "@/services/fakers/inferred-types.faker";
 
 async function getProgrammation(id: number): Promise<Programmation> {
   if (!id) throw new Error("ID is required");

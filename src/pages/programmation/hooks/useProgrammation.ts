@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 
 import { createColumnHelper } from "@tanstack/react-table";
 
-import {
+import type {
   Programmation,
   Periode,
   Domaine,
@@ -14,7 +14,7 @@ import { TitleCell } from "../components/title-cell";
 
 import {
   FR_PROGRAMMATION_VIEWS,
-  ProgrammationView as View
+  type ProgrammationView as View
 } from "@/enums/views";
 
 function useProgrammation(programmation?: Programmation) {
