@@ -13,29 +13,42 @@ import type {
   Domaine,
   Item
 } from "@/services/fakers/inferred-types.faker";
-import type { ProgrammationView as View } from "@/enums/views";
+import {
+  FR_PROGRAMMATION_VIEWS,
+  type ProgrammationView as View
+} from "@/enums/views";
+
+/**
+ * UTILS
+ */
+
+const periodeColumnHelper = createColumnHelper<Periode>();
+const domaineColumnHelper = createColumnHelper<Domaine>();
+
+const findItemByPeriodeId = (items: Item[], periodeId: string) =>
+  items.find((item) => item.periodeId === periodeId);
+
+/**
+ * COLUMNS
+ */
 
 // PERIODE VIEW
 const generatePeriodeViewColumns = (programmation: Programmation) => {
   const domaines = programmation.attributes.matieres[0].domaines;
 
-  const periodeColumnHelper = createColumnHelper<Periode>();
-
-  const findDomaineItemsById = (domaineId: string) =>
+  const findItemsByDomaineId = (domaineId: string) =>
     domaines.find((domaine) => domaine.id === domaineId)?.items || [];
 
-  const findItemByDomaineId = (domaineId: string) => (row: Periode) =>
-    findDomaineItemsById(domaineId).find(
-      (item: Item) => item.periodeId === row.id
-    );
+  const findItem = (domaineId: string) => (row: Periode) =>
+    findItemByPeriodeId(findItemsByDomaineId(domaineId), row.id);
 
   return [
     periodeColumnHelper.accessor("name", {
-      header: "Période",
+      header: FR_PROGRAMMATION_VIEWS.PERIODE,
       cell: TitleCell("PERIODE")
     }),
     ...domaines.map((domaine) =>
-      periodeColumnHelper.accessor(findItemByDomaineId(domaine.id), {
+      periodeColumnHelper.accessor(findItem(domaine.id), {
         header: domaine.name,
         cell: ItemCell
       })
@@ -47,24 +60,26 @@ const generatePeriodeViewColumns = (programmation: Programmation) => {
 const generateDomaineViewColumns = (programmation: Programmation) => {
   const periodes = programmation.attributes.periodes;
 
-  const domaineColumnHelper = createColumnHelper<Domaine>();
-
-  const findItemByPeriodeId = (periodeId: string) => (row: Domaine) =>
-    row.items.find((item: Item) => item.periodeId === periodeId);
+  const findItem = (periodeId: string) => (row: Domaine) =>
+    findItemByPeriodeId(row.items, periodeId);
 
   return [
     domaineColumnHelper.accessor("name", {
-      header: "Domaine",
+      header: FR_PROGRAMMATION_VIEWS.DOMAINE,
       cell: TitleCell("DOMAINE")
     }),
     ...periodes.map((periode) =>
-      domaineColumnHelper.accessor(findItemByPeriodeId(periode.id), {
+      domaineColumnHelper.accessor(findItem(periode.id), {
         header: periode.name,
         cell: ItemCell
       })
     )
   ];
 };
+
+/**
+ * EXPORTS
+ */
 
 const generateColumns = (programmation: Programmation, view: View) => {
   return (
